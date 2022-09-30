@@ -1,0 +1,62 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "ng": "ng",
+    "stadrt": "node server.js",
+    "start": "ng server",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --configuration production"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^13.3.11",
+    "@angular/common": "^13.3.11",
+    "@angular/compiler": "^13.3.11",
+    "@angular/core": "^13.3.11",
+    "@angular/forms": "^13.3.11",
+    "@angular/http": "^7.2.16",
+    "@angular/platform-browser": "^13.3.11",
+    "@angular/platform-browser-dynamic": "^13.3.11",
+    "@angular/platform-server": "^13.3.11",
+    "@angular/router": "^13.3.11",
+    "@angular/upgrade": "13.3.11",
+    "core-js": "3.25.3",
+    "express": "^4.18.1",
+    "katex": "^0.16.2",
+    "ngx-bootstrap": "^9.0.0",
+    "ngx-pagination": "^6.0.2",
+    "nodemon": "^2.0.20",
+    "rxjs": "^7.5.7",
+    "sweetalert2": "^11.4.35",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^13.3.9",
+    "@angular/cli": "^13.3.9",
+    "@angular/compiler-cli": "^13.3.11",
+    "@types/jasmine": "3.5.0",
+    "@types/node": "^13.1.6",
+    "codelyzer": "~6.0.2",
+    "jasmine-core": "4.4.0",
+    "jasmine-spec-reporter": "7.0.0",
+    "karma": "^6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
+    "karma-cli": "^2.0.0",
+    "karma-jasmine": "^5.1.0",
+    "karma-remap-istanbul": "^0.6.0",
+    "protractor": "^7.0.0",
+    "ts-node": "10.9.1",
+    "tslint": "^6.1.3",
+    "typescript": "4.6.4"
+  },
+  "engines": {
+    "node": "12.16.3",
+    "npm": "6.14.5"
+  }
+}
