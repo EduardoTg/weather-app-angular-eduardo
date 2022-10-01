@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { citysComponent } from './citys.component';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { ModalModule } from "ngx-bootstrap/modal";
+
+import { CitysComponent, ModalContentComponent } from "./citys.component";
+
 @NgModule({
-  declarations: [
-    citysComponent        
-],
-  imports: [
-    CommonModule,
-    FormsModule    
-  ],
+  declarations: [CitysComponent, ModalContentComponent],
+  imports: [CommonModule, FormsModule, ModalModule.forRoot()],
+  entryComponents: [ModalContentComponent],
+  bootstrap: [CitysComponent]
 })
-export class CitysModule { }
+export class CitysModule {}

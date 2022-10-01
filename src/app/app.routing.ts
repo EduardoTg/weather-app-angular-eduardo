@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FullLayoutComponent } from './layouts/full-layout.component';
-import { citysComponent } from '../app/citys/citys.component'
+import { CitysComponent } from '../app/citys/citys.component'
 
 export const routes: Routes = [
 /*     {
@@ -22,7 +22,7 @@ export const routes: Routes = [
         children: [
             {
                 path: 'search',
-                component : citysComponent
+                component : CitysComponent
             }
         ]
 

@@ -17,16 +17,20 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th *ngIf="citys">{{ citys.name }}</th>
+                <tr *ngIf="citys">
+                  <th>{{ citys.name }}</th>
                   <td>
                     {{ citys.weather[0].description }}
-                    <div>
-
-                    </div>
+                    <div></div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-primary" click="showModal()">Ver</button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      (click)="showModal()"
+                    >
+                      Ver
+                    </button>
                   </td>
                 </tr>
               </tbody>
