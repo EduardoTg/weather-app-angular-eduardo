@@ -6,7 +6,7 @@ import { citysComponent } from '../app/citys/citys.component'
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'citys',
+        redirectTo: '/home/search',
         pathMatch: 'full'
 
     },
@@ -15,7 +15,7 @@ export const routes: Routes = [
         component: FullLayoutComponent,
         children: [
             {
-                path: 'citys',
+                path: '/home/search',
                 component : citysComponent
             }
         ]

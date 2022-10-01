@@ -8,10 +8,29 @@
         </div>
         <div class="card-block">
           <div class="row">
-            <label class="col-lg-3 desktop">Name</label>
-            <label class="col-lg-1 desktop pl-0">Required</label>
-            <label class="col-lg-3 desktop">Rule Name </label>
-            <label class="col-lg-3 desktop">Rule Argument</label>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Weather</th>
+                  <th scope="col">View</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>{{ citys.name }}</th>
+                  <td>
+                    {{ citys.weather[0].description }}
+                    <div>
+
+                    </div>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-primary">Ver</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

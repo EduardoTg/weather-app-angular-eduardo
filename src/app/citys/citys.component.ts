@@ -7,13 +7,12 @@ import Swal from "sweetalert2";
   styleUrls: ["./style.css"],
 })
 export class citysComponent implements OnInit {
-  rules: any = [];
+  citys: any = [];
   form: any = {};
   fieldsList: any = [];
   validador: any = {};
 
   constructor(private cityService: CityService) {}
-  // this.fieldsList[index].required = event.target.checked;
 
   ngOnInit() {
     this.getData();
@@ -21,9 +20,9 @@ export class citysComponent implements OnInit {
 
   getData() {
     this.form = {};
-    this.rules = this.cityService.showRules();
-    let y = this.rules.subscribe();
-    console.log(y);
+    this.cityService
+      .getCitys()
+      .subscribe((citysResponse) => (this.citys = citysResponse));
   }
 
   deleteArgument(index: number, indexRule: number) {
@@ -36,7 +35,7 @@ export class citysComponent implements OnInit {
       cancelButtonColor: "#3085d6",
       confirmButtonText: "Delete",
     }).then((result) => {
-      if (result.value) this.fieldsList[index].rules.splice(indexRule, 1);
+      if (result.value) this.fieldsList[index].citys.splice(indexRule, 1);
     });
   }
 
