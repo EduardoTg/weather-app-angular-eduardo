@@ -18,7 +18,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <th>{{ citys.name }}</th>
+                  <th *ngIf="citys">{{ citys.name }}</th>
                   <td>
                     {{ citys.weather[0].description }}
                     <div>
@@ -26,7 +26,7 @@
                     </div>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-primary">Ver</button>
+                    <button type="button" class="btn btn-primary" click="showModal()">Ver</button>
                   </td>
                 </tr>
               </tbody>

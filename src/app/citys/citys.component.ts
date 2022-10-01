@@ -1,13 +1,16 @@
 import { Component, OnInit } from "@angular/core";
 import { CityService } from "../services/citys.service";
+import { City } from "../shared/common";
+import { BsModalService, BsModalRef, ModalOptions } from 'ngx-bootstrap/modal';
 import Swal from "sweetalert2";
+
 @Component({
   selector: "app-citys",
   templateUrl: "./citys.component.html",
   styleUrls: ["./style.css"],
 })
 export class citysComponent implements OnInit {
-  citys: any = [];
+  citys: City ;
   form: any = {};
   fieldsList: any = [];
   validador: any = {};
@@ -39,7 +42,7 @@ export class citysComponent implements OnInit {
     });
   }
 
-  save() {
+  showModal() {
     console.log(this.fieldsList);
   }
 }
