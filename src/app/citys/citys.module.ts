@@ -3,12 +3,14 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { ModalModule } from "ngx-bootstrap/modal";
 
-import { CitysComponent, ModalContentComponent } from "./citys.component";
+import { CitysComponent } from "./citys.component";
+
+import { ModalCityDataComponent } from "./modalCityData/modalCityData.component";
 
 @NgModule({
-  declarations: [CitysComponent, ModalContentComponent],
+  declarations: [CitysComponent, ModalCityDataComponent],
   imports: [CommonModule, FormsModule, ModalModule.forRoot()],
-  entryComponents: [ModalContentComponent],
-  bootstrap: [CitysComponent]
+  entryComponents: [ModalCityDataComponent],
+  bootstrap: [CitysComponent],
 })
 export class CitysModule {}
