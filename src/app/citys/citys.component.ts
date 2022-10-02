@@ -49,15 +49,10 @@ export class CitysComponent implements OnInit {
   }
 
   showModal() {
-    const initialState: ModalOptions = {
+    const initialState:ModalOptions  = {
       initialState: {
-        list: [
-          "Open a modal with component",
-          "Pass your data",
-          "Do something else",
-          "...",
-        ],
-        title: "Modal with component",
+        city: this.citys,
+        title: "Weather of the day.",
       },
     };
     this.bsModalRef = this.modalService.show(

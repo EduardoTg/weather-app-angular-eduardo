@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-
+import { City } from "../../shared/common";
 @Component({
   selector: "app-modalCityData",
   templateUrl: "./modalCityData.component.html",
@@ -10,11 +10,10 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 export class ModalCityDataComponent implements OnInit {
   title?: string;
   closeBtnName?: string;
-  list: any[] = [];
+  city: City;
 
   constructor(public bsModalRef: BsModalRef) {}
 
   ngOnInit() {
-    this.list.push('PROFIT!!!');
   }
 }
