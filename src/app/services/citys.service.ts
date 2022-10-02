@@ -8,9 +8,9 @@ import { City } from "../shared/common";
 export class CityService {
   constructor(public http: HttpClient) {}
 
-  getCitys(): Observable<City> {
+  getCitys(cityName : string): Observable<City> {
     return this.http.get<City>(
-      CONFIG.API + "q=cuernavaca" + "&appid=" + CONFIG.APIKEY
+      CONFIG.API + "q=" + cityName + "&appid=" + CONFIG.APIKEY
     );
   }
 }

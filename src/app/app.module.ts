@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { NAV_DROPDOWN_DIRECTIVES } from "./shared/nav-dropdown.directive";
 import { SIDEBAR_TOGGLE_DIRECTIVES } from "./shared/sidebar.directive";
 import { AsideToggleDirective } from "./shared/aside.directive";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
 // Routing Module
 import { AppRoutingModule } from "./app.routing";
 // Layouts
@@ -16,6 +16,8 @@ import { CityService } from "./services/citys.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // components
 import { CitysModule } from "../app/citys/citys.module";
+//Styles
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,6 +26,8 @@ import { CitysModule } from "../app/citys/citys.module";
     HttpClientModule,
     BrowserAnimationsModule,
     CitysModule,
+    ButtonsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,

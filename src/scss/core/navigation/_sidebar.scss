@@ -100,7 +100,7 @@
         padding: $sidebar-nav-link-padding-y $sidebar-nav-link-padding-x;
         color: $sidebar-nav-link-color;
         text-decoration: none;
-        background: $sidebar-nav-link-bg;
+        background: #228fbf;
         @include borders($sidebar-nav-link-borders);
         @if $enable-sidebar-nav-rounded {
           border-radius: $border-radius;
@@ -108,7 +108,7 @@
 
         &:hover {
           color: $sidebar-nav-link-hover-color !important;
-          background: $sidebar-nav-link-hover-bg !important;
+          background: #267da39e !important;
           @include borders($sidebar-nav-link-hover-borders);
 
           i {
