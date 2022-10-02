@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { Subject } from "rxjs";
 import Swal from "sweetalert2";
 
 import { CityService } from "../services/citys.service";
@@ -13,8 +14,10 @@ import { City } from "../shared/common";
 })
 export class FullLayoutComponent implements OnInit {
   public disabled: boolean = false;
-  myForm: FormGroup;
-  citys: City;
+  public myForm: FormGroup;
+  public citys: City;
+  private sendCity = new Subject<City>();
+  sendCityObs = this.sendCity.asObservable();
 
   constructor(
     private router: Router,
@@ -41,11 +44,10 @@ export class FullLayoutComponent implements OnInit {
   }
 
   onSubmit(form: FormGroup) {
-    console.log(13);
-
     this.cityService.getCitys(form.value.city).subscribe(
       (citysResponse) => {
         this.citys = citysResponse;
+        this.sendCity.next(this.citys);
       },
       (err) => {
         Swal.fire({

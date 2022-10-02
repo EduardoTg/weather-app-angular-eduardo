@@ -16,11 +16,27 @@
         <li>
           <div class="pt-2 pb-2">
             <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
-              <input type="text" formControlName="city" class="form-control" placeholder="Enter city name"/>
-              <div *ngIf="myForm.get('city').invalid && (myForm.get('city').dirty || myForm.get('city').touched)">
+              <input
+                type="text"
+                formControlName="city"
+                class="form-control"
+                placeholder="Enter city name"
+              />
+              <div
+                *ngIf="
+                  myForm.get('city').invalid &&
+                  (myForm.get('city').dirty || myForm.get('city').touched)
+                "
+              >
                 Please provide a valid city.
               </div>
-              <button type="submit" class="btn btn-primary mt-1 w-100" [disabled]="myForm.invalid">Find</button>
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                [disabled]="myForm.invalid"
+              >
+                Find
+              </button>
             </form>
           </div>
         </li>

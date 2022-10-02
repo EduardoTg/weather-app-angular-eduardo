@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { BsModalRef, BsModalService, ModalOptions } from "ngx-bootstrap/modal";
-import Swal from "sweetalert2";
-import { ModalCityDataComponent } from "./modalCityData/modalCityData.component";
+
 import { City } from "../shared/common";
+import { ModalCityDataComponent } from "./modalCityData/modalCityData.component";
+
+import { FullLayoutComponent } from "../../app/layouts/full-layout.component";
 
 @Component({
   selector: "app-citys",
@@ -16,18 +18,17 @@ export class CitysComponent implements OnInit {
   bsModalRef?: BsModalRef;
 
   constructor(
-   
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private fullLayoutComponent: FullLayoutComponent
   ) {}
 
   ngOnInit() {
-    this.getData();
+    this.fullLayoutComponent.sendCityObs.subscribe((response) => {
+      this.citys = response;
+      console.log(234);
+      
+    });
   }
-
-  getData() {
-
-  }
-
 
   showModal() {
     const initialState: ModalOptions = {
