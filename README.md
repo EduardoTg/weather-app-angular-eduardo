@@ -4,7 +4,7 @@ Weather-app it´s a javascript project. Show weather by city. Powered by Angular
 
 ## Installation
 
-Weather-app uses npm. first clone project. then run the next command to install packages
+Weather-app uses npm. first clone project. Switch master branch. then run the next command to install packages
 ```bash
 npm install
 ```
