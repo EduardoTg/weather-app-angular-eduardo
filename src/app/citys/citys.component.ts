@@ -28,19 +28,6 @@ export class CitysComponent implements OnInit {
 
   }
 
-  deleteArgument(index: number, indexRule: number) {
-    Swal.fire({
-      title: "",
-      text: "Are you sure delete argument?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#d33",
-      cancelButtonColor: "#3085d6",
-      confirmButtonText: "Delete",
-    }).then((result) => {
-      if (result.value) this.fieldsList[index].citys.splice(indexRule, 1);
-    });
-  }
 
   showModal() {
     const initialState: ModalOptions = {
