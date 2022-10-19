@@ -4,15 +4,10 @@ import { FullLayoutComponent } from './layouts/full-layout.component';
 import { CitysComponent } from '../app/citys/citys.component'
 
 export const routes: Routes = [
-/*     {
-        path: '',
-        redirectTo: 'search',
-        pathMatch: 'full'
 
-    }, */
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'home/search',
         pathMatch: 'full'
 
     },
